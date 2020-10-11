@@ -1,0 +1,7 @@
+name: WorldTeleport
+version: ${project.version}
+main: com.abstractionalpha.minecraft.plugins.worldteleport.WorldTeleport
+api-version: 1.16
+authors: [ abstractionAlpha ]
+description: Teleport between worlds.
+website: abstractionAlpha.com
