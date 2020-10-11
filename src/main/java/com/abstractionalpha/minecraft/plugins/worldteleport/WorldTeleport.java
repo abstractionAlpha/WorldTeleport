@@ -6,13 +6,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class WorldTeleport extends JavaPlugin {
 
+    DoTeleport doTeleport;
+
     /**
      * Plugin start-up logic.
      */
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        doTeleport = new DoTeleport(this);
+        getServer().getPluginManager().registerEvents(doTeleport, this);
     }
 
     /**
@@ -31,10 +33,10 @@ public final class WorldTeleport extends JavaPlugin {
 
             switch(args.length) {
                 case 4:
-                    sender.sendMessage("tpw <world> <x> <y> <z>");
+                    doTeleport.SelfTeleport(sender, args);
                     break;
                 case 5:
-                    sender.sendMessage("tpw <usr> <world> <x> <y> <z>");
+                    // Player teleport
                     break;
                 default:
                     sender.sendMessage("Args length: " + args.length);
