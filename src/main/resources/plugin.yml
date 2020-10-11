@@ -5,3 +5,8 @@ api-version: 1.16
 authors: [ abstractionAlpha ]
 description: Teleport between worlds.
 website: abstractionAlpha.com
+commands:
+  tpw:
+    description: World teleport command. Works the same as vanilla teleport with the addition of a world function.
+    permission: worldteleport.tpw
+    permission-message: You do not have that permission.
